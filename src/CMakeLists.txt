@@ -25,3 +25,9 @@ target_link_libraries(SC_CMAKE PUBLIC ${EXTRA_LIBS})
 target_include_directories(SC_CMAKE PUBLIC 
   "${PROJECT_BINARY_DIR}" 
 )
+
+install(TARGETS SC_CMAKE DESTINATION bin)
+install(FILES "${PROJECT_BINARY_DIR}/Config.h"
+  DESTINATION include
+)
+
