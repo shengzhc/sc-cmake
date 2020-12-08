@@ -16,21 +16,23 @@ int main(int argc, char *argv[])
   }
 
   // stod dependency test
-  if (argc > 0) {
+  if (argc > 1) {
     std::cout << "Printing inputValue -----" << std::endl;
     const double inputValue = std::stod(argv[1]);
     std::cout << inputValue << std::endl;
   }
 
   // sub-library test
-  const double inputValue = std::stod(argv[1]);
+  if (argc > 1) {
+    const double inputValue = std::stod(argv[1]);
 #ifdef USE_MYMATH
-  const double outputValue = mysqrt(inputValue);
+    const double outputValue = mysqrt(inputValue);
 #else
-  const double outputValue = sqrt(inputValue);
+    const double outputValue = sqrt(inputValue);
 #endif
-  std::cout << "Printing square of inputValue -----" << std::endl;
-  std::cout << outputValue << std::endl;
+    std::cout << "Printing square -----" << std::endl;
+    std::cout << inputValue << " is " << outputValue << std::endl;
+  }
 
-  return 1;
+  return 0;
 }
