@@ -1,3 +1,4 @@
 // the configured options and settings for sc-cmake
+#cmakedefine USE_MYMATH
 #define SC_CMAKE_VERSION_MAJOR @SC_CMAKE_VERSION_MAJOR@
 #define SC_CMAKE_VERSION_MINOR @SC_CMAKE_VERSION_MINOR@
