@@ -2,3 +2,8 @@
 #cmakedefine USE_MYMATH
 #define SC_CMAKE_VERSION_MAJOR @SC_CMAKE_VERSION_MAJOR@
 #define SC_CMAKE_VERSION_MINOR @SC_CMAKE_VERSION_MINOR@
+
+// does the platform provide exp and log functions?
+#cmakedefine HAVE_LOG
+#cmakedefine HAVE_EXP
+
