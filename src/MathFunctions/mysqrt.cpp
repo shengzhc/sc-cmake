@@ -1,6 +1,5 @@
 #include <iostream>
 #include <cmath>
-#include "Config.h"
 
 double mysqrt(double inputValue)
 {
