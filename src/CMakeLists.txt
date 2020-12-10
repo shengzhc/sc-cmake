@@ -1,6 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
 
-
 # set the project name
 project(SC_CMAKE VERSION 1.0)
 
@@ -57,3 +56,8 @@ do_test(SC_CMAKE 25 "25 is 5")
 do_test(SC_CMAKE -25 "-25 is [-nan|nan|0]")
 do_test(SC_CMAKE 0.0001 "0.0001 is 0.01")
 
+include(InstallRequiredSystemLibraries)
+set(CPAKC_RESOURCE_FILE_LICENSE "${CMAKE_CURRENT_SOURCE_DIR}/License.txt")
+set(CPACK_PACKAGE_VERSION_MAJOR "${SC_CMAKE_VERSION_MAJOR}")
+set(CPACK_PACKAGE_VERSION_MINOR "${SC_CMAKE_VERSION_MINOR}")
+include(CPack)
