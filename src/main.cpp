@@ -1,10 +1,8 @@
 #include <iostream>
 #include <string>
-#include "Config.h"
-#ifdef USE_MYMATH
-  #include "MathFunctions.h"
-#endif
 
+#include "MathFunctions.h"
+#include "Config.h"
 
 int main(int argc, char *argv[])
 {
@@ -25,11 +23,7 @@ int main(int argc, char *argv[])
   // sub-library test
   if (argc > 1) {
     const double inputValue = std::stod(argv[1]);
-#ifdef USE_MYMATH
-    const double outputValue = mysqrt(inputValue);
-#else
-    const double outputValue = sqrt(inputValue);
-#endif
+    const double outputValue = mathfunctions::sqrt(inputValue);
     std::cout << "Printing square -----" << std::endl;
     std::cout << inputValue << " is " << outputValue << std::endl;
   }
